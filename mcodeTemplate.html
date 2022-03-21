@@ -58,6 +58,7 @@
  *  Date:         By-Group:   Rev:     Description:
  *
  *  04-Mar-2022   TJM-MCODE  {0001}    New file for starting all HTML files to maintain common structure.
+ *  21-Mar-2022   TJM-MCODE  {0002}    Added Buttons 4, 5; added Bootstrap Minimum Styles.
  *
  *
 -->
@@ -70,6 +71,12 @@
 <html lang="en">
 
     <!-- #region  C S S : visual styles -->
+
+    <!-- Popular Style Sheets from BOOTSTRAP -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- Page Specific Styles -->
     <style>
 
     </style>
@@ -112,9 +119,24 @@
 
     <!-- #region  B O D Y -->
     <body>
-        <button id="btnUI_Button1">Button 1</button>
-        <button id="btnUI_Button2">Button 2</button>
-        <button id="btnUI_Button3">Button 3</button>
+        <div class="col-2">
+            <p></p>
+            <button id="btnUI_Button1"
+                    class="btn btn-primary">Button 1</button>
+            <p></p>
+            <button id="btnUI_Button2"
+                    class="btn btn-primary">Button 2</button>
+            <p></p>
+            <button id="btnUI_Button3"
+                    class="btn btn-primary">Button 3</button>
+            <p></p>
+            <button id="btnUI_Button4"
+                    class="btn btn-primary">Button 4</button>
+            <p></p>
+            <button id="btnUI_Button5"
+                    class="btn btn-primary">Button 5</button>
+            <p></p>
+        </div>
     </body>
     <!-- #endregion -->
 
@@ -200,6 +222,20 @@
             console.log(callBack(messageData3));
         }
 
+        // Button #4 handler
+        function btnUI_Button4_Click(messageData4, callBack)
+        {
+            // Handle 'Click'...
+            console.log(callBack(messageData4));
+        }
+
+        // Button #5 handler
+        function btnUI_Button5_Click(messageData5, callBack)
+        {
+            // Handle 'Click'...
+            console.log(callBack(messageData5));
+        }
+
         // #endregion
 
         // #region  E X E C U T I O N
@@ -215,6 +251,12 @@
 
         document.getElementById("btnUI_Button3")
             .addEventListener("click", () => { btnUI_Button3_Click('Button #3', callbackFormatter); });
+
+        document.getElementById("btnUI_Button4")
+            .addEventListener("click", () => { btnUI_Button4_Click('Button #4', callbackFormatter); });
+
+        document.getElementById("btnUI_Button5")
+            .addEventListener("click", () => { btnUI_Button5_Click('Button #5', callbackFormatter); });
 
         // Set Timeout Events...
 
