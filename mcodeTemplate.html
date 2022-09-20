@@ -59,6 +59,8 @@
  *
  *  04-Mar-2022   TJM-MCODE  {0001}    New file for starting all HTML files to maintain common structure.
  *  21-Mar-2022   TJM-MCODE  {0002}    Added Buttons 4, 5; added Bootstrap Minimum Styles.
+ *  20-Spe-2022   TJM-MCODE  {0003}    Updated Fonts after creating www.mcode.com/brand page.
+ *
  *
  *
 -->
@@ -90,7 +92,7 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=120, initial-scale=1.0">
-        <title>MIT xPRO: WEEK n</title>
+        <title>MCODE: Template Page</title>
 
         <!-- #region  F O N T S -- our default fonts -->
 
@@ -107,7 +109,7 @@
               rel="stylesheet">
 
         <!-- MICHROMA (Eurostile) 400 'Normal' -->
-        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+        <link href="https://fonts.googleapis.com/css2?family=Michroma:wght@400&display=swap"
               rel="stylesheet">
 
         <!-- QUESTRIAL 400 'Normal' -->
@@ -115,6 +117,7 @@
               rel="stylesheet">
 
         <!-- #endregion -->
+
     </head>
     <!-- #endregion -->
 
@@ -155,6 +158,9 @@
 
         // #region  P R I V A T E   C O N S T A N T S
 
+        const NOT_IMPLEMENTED = ' is not implemented.';
+        const NOW_IMPLEMENTED = ' is now implemented.';
+
         const CONSTANT_1 = 1;  // Constant #1
         const CONSTANT_2 = 2;  // Constant #2
 
@@ -162,7 +168,6 @@
 
         // #region  P R I V A T E   F I E L D S
 
-        let _notImplemented = ' is not implemented.';
         let _privateField1 = 0;
         let _privateField2 = [];
 
@@ -189,10 +194,10 @@
         /*
          * callback*() - callback* description.
          */
-        function callbackFormatter(messageData)
+        function callbackNotImplemented(messageData)
         {
             // handle item manipulation...
-            return messageData + _notImplemented;
+            return messageData + NOT_IMPLEMENTED;
         }
 
         // #endregion
@@ -245,19 +250,19 @@
 
         // Map Event Handlers...
         document.getElementById("btnUI_Button1")
-            .addEventListener("click", () => { btnUI_Button1_Click('Button #1', callbackFormatter); });
+            .addEventListener("click", () => {btnUI_Button1_Click('Button #1', callbackNotImplemented);});
 
         document.getElementById("btnUI_Button2")
-            .addEventListener("click", () => { btnUI_Button2_Click('Button #2', callbackFormatter); });
+            .addEventListener("click", () => {btnUI_Button2_Click('Button #2', callbackNotImplemented);});
 
         document.getElementById("btnUI_Button3")
-            .addEventListener("click", () => { btnUI_Button3_Click('Button #3', callbackFormatter); });
+            .addEventListener("click", () => {btnUI_Button3_Click('Button #3', callbackNotImplemented);});
 
         document.getElementById("btnUI_Button4")
-            .addEventListener("click", () => { btnUI_Button4_Click('Button #4', callbackFormatter); });
+            .addEventListener("click", () => {btnUI_Button4_Click('Button #4', callbackNotImplemented);});
 
         document.getElementById("btnUI_Button5")
-            .addEventListener("click", () => { btnUI_Button5_Click('Button #5', callbackFormatter); });
+            .addEventListener("click", () => {btnUI_Button5_Click('Button #5', callbackNotImplemented);});
 
         // Set Timeout Events...
 
